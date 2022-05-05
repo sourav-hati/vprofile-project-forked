@@ -105,10 +105,11 @@
       when: ansible_distribution_major_version > '6' or ansible_distribution_major_version > '15'
 
     - name: Start & Enable TOMCAT 8
-      ansible.builtin.service:
+      service:
         daemon_reload: yes
         name: tomcat
         state: started
         enabled: yes
+      when: ansible_service_mgr == "systemd"
 
    
