@@ -106,6 +106,7 @@
 
     - name: Start & Enable TOmcat 8
       service:
+        daemon_reload: yes
         name: tomcat
         state: started
         enabled: yes
