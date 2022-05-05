@@ -104,8 +104,8 @@
         daemon_reload: yes 
       when: ansible_distribution_major_version > '6' or ansible_distribution_major_version > '15'
 
-    - name: Start & Enable TOmcat 8
-      service:
+    - name: Start & Enable TOMCAT 8
+      systemd:
         daemon_reload: yes
         name: tomcat
         state: started
