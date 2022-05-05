@@ -28,12 +28,12 @@
         name: tomcat
         state: present
 
-    - name: Add tomcat user
-      user:
-        name: tomcat
-        group: tomcat
-        shell: /bin/nologin
-        home: /usr/local/tomcat8
+#     - name: Add tomcat user
+#       user:
+#         name: tomcat
+#         group: tomcat
+#         shell: /bin/nologin
+#         home: /usr/local/tomcat8
 
     - file:
         path: /tmp/tomcat8
